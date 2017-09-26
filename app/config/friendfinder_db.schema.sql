@@ -7,7 +7,8 @@ CREATE TABLE friends (
     id INTEGER(10) AUTO_INCREMENT,
     name VARCHAR(50),
     photo VARCHAR(255),
-    scores INTEGER(10),
+    scores varchar(20),
+    totalScore FLOAT(4,1),
     PRIMARY KEY (id)
 );
 
