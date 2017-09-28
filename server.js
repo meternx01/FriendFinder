@@ -10,9 +10,9 @@
 // sections of code
 //
 // FLOW *******
-//	HTML ROUTES /*/*/*/*	
+//	HTML ROUTES /*/*/*/*
 // 	home.html --LINKS-TO--> survey.html --POST-TO-API--> modal with match
-// 	
+//
 //	API ROUTEs */*/*/*
 //	GET -> /api/friends
 //		returns all possible friends
@@ -31,6 +31,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
+// app.use(express.static('public'));
 
 require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);

@@ -23,29 +23,12 @@ $("#btn-submit").on("click", function(event){
     };
 
     //insertIntoDB(friend);
-
-
-
-    $.post("/api/friends", friend,
-    function(data) {
-        console.log("HI");
-        //
-        // // If a table is available... tell user they are booked.
-        // if (data) {
-        //     alert("Yay! You are officially booked!");
-        // }
-        //
-        // // If a table is available... tell user they on the waiting list.
-        // else {
-        //     alert("Sorry you are on the wait list");
-        // }
-        //
-        // // Clear the form when submitting
-        // $("#reserve-name").val("");
-        // $("#reserve-phone").val("");
-        // $("#reserve-email").val("");
-        // $("#reserve-unique-id").val("");
-
-    });
-
+    $.post("/api/match", {score:friend.totalScore},function(response){
+        //MODAL LAUNCH
+        // $.post("/api/friends", friend,
+        // function(data, status) {
+        //     console.log(data);
+        // });
+    })
+    res.redirect("/survey");
 });
