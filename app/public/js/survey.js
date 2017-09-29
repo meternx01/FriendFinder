@@ -23,12 +23,14 @@ $("#btn-submit").on("click", function(event){
     };
 
     //insertIntoDB(friend);
-    $.post("/api/match", {score:friend.totalScore},function(response){
+    $.get("/api/match", {score:friend.totalScore},function(response){
         //MODAL LAUNCH
-        // $.post("/api/friends", friend,
-        // function(data, status) {
-        //     console.log(data);
-        // });
+         $.post("/api/friends", friend,
+         function(data, status) {
+             console.log(data);
+			 res.end();
+         });
+		
     })
-    res.redirect("/survey");
+    
 });
