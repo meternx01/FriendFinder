@@ -14,7 +14,7 @@ module.exports = function(app) {
         //   res.json(results);
         // });
 		res.json({ name : "Hulky",
-        photo : "SomeURL",
+        photo : "http://cdn.sportsmemorabilia.com/sports-product-image/1-t5118366-500.jpg",
         scores : "12345",
         totalScore: 35});
     });
@@ -24,6 +24,7 @@ module.exports = function(app) {
 //        var query = connection.query("INSERT INTO friends SET ?", req.body, function(error, results, fields){
 //            if(error) throw error;
 //            console.log(results.affectedRows + " friend inserted!\n");
+			res.end();
 //        });
 //        console.log(query.sql);
     });
