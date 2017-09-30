@@ -1,5 +1,6 @@
 $("#btn-submit").on("click", function(event){
-
+	
+	event.preventDefault();
 
     var varInputName = $("#inputName").val().trim();
     var varInputLink = $("#inputPhoto").val().trim();
@@ -30,9 +31,9 @@ $("#btn-submit").on("click", function(event){
 			//  res.end();
          });
 
-		$("#myModal").on('show.bs.modal', function(){
-			alert("Modal Display Oncoming");
-		});
+		//	$("#myModal").on('show.bs.modal', function(){
+		//		alert("Modal Display Oncoming");
+		//	});
 		$("#matchName").html(response.name);
 		$("#matchImage").attr("src",response.photo);
 		$("#myModal").modal('show');
