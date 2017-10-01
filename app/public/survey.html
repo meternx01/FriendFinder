@@ -3,35 +3,41 @@
 
 	<head>
 		<title>Friend Finder</title>
+		<!-- bootstrap link -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<!-- The myth.. the legend.. JQUERY! -->
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<!-- bootstrap js link -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- my CSS -->
 		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<!-- responsive bootstrap -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 
 	<body>
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-offset-1 col-md-10">
-					<div class="jumbotron">
+				<div class="col-md-offset-1 col-md-10">	<!-- Grid system margin / center-->
+					<div class="jumbotron">	<!-- Nice jumbotron Element-->
 						<h2>
 							Survey Questions
 						</h2>
-						<form role="form">
+						<form role="form">	<!-- Begin form -->
+							<!-- Name Form Element -->
 							<div class="form-group">
-
 								<label for="inputName">Name (Required)</label>
 								<input type="text" class="form-control" id="inputName" />
 							</div>
+							<!-- Photo Form Element -->
 							<div class="form-group">
-
 								<label for="inputPhoto">Link to Photo (Required)</label>
 								<input type="text" class="form-control" id="inputPhoto" />
 							</div>
+							<!-- Instructions -->
 							<h3>Answer where 1 is least likely, and 5 is most like me</h3>
 							<hr>
-
+							<!-- Begin Select Questions -->
 							<div class="form-group">
 								<label for="inputQ1">I really enjoy home-cooked meals.</label>
 								<select class="form-control questions" id="inputQ1">
@@ -132,21 +138,23 @@
                                     <option>5</option>
                                 </select>
 							</div>
+							<!-- submit button -->
 							<button type="submit" class="btn btn-default" id="btn-submit">Submit</button>
 						</form>
 					</div>
 				</div>
 			</div>
+			<!-- ****************MODAL CODE****************** -->
 			<div class="modal" id="myModal" role="dialog">
 				<div class="modal-dialog">
-
-					<!-- Modal content-->
+					<!-- Modal content I used the bootstrap modal-->
 					<div class="modal-content">
 						<div class="modal-header">
 							<button type="button" class="close" data-dismiss="modal">&times;</button>
 							<h3 class="modal-title text-center">Best Match</h3>
 						</div>
 						<div class="modal-body">
+							<!-- elements for the name and picture of the match -->
 							<h4 class="text-center" id="matchName">NAME</h4>
 							<img class="img-resposnive img-circle center-block" id="matchImage" src="" />
 						</div>
@@ -154,10 +162,10 @@
 							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 						</div>
 					</div>
-
 				</div>
 			</div>
 
+			<!-- my client side JS -->
 			<script type="text/javascript" src="../js/survey.js"></script>
 	</body>
 

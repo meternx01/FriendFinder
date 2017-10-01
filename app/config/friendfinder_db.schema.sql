@@ -12,9 +12,6 @@ CREATE TABLE friends (
     PRIMARY KEY (id)
 );
 
-INSERT INTO friends(name,photo,scores) 
-VALUES ("David Hasselhoff", "http://img.wennermedia.com/480-width/1342557375_davidhasselhoff-467.jpg",5542351155), ;
-
 SELECT 
     *
 FROM

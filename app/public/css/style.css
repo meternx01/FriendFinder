@@ -1,12 +1,30 @@
+/*  FriendFinder Homework Assignment
+    by Jason Mckinney
+    9/30/2017
+
+    CSS - for Home and Survey pages
+
+    Contains style elements for survey and home pages
+*******************************************************************************/
+
+
+/*Alters jumbotron to make the home links look more appeasing*/
+
 .jumbotron {
-    margin-bottom: 0;
+	margin-bottom: 0;
 }
 
-.questions{
-    width : 100px;
+
+/* Alters the questions select boxes to look better*/
+
+.questions {
+	width: 100px;
 }
+
+
+/* Modal Image won't be huge*/
 
 img {
-  max-height: 240px;
-  max-width: 240px;
+	max-height: 240px;
+	max-width: 240px;
 }
