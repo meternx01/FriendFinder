@@ -5,3 +5,8 @@
 .questions{
     width : 100px;
 }
+
+img {
+  max-height: 240px;
+  max-width: 240px;
+}

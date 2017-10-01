@@ -25,7 +25,10 @@ $("#btn-submit").on("click", function(event){
 
     //insertIntoDB(friend);
     $.get("/api/match", {score:friend.totalScore},function(response){
-        $.post("/api/friends", friend,
+        console.log(response);
+		$("#matchName").html(response.name);
+		$("#matchImage").attr("src",response.photo);
+		$.post("/api/friends", friend,
          function(data, status) {
              console.log(data);
 			//  res.end();
@@ -34,8 +37,7 @@ $("#btn-submit").on("click", function(event){
 		//	$("#myModal").on('show.bs.modal', function(){
 		//		alert("Modal Display Oncoming");
 		//	});
-		$("#matchName").html(response.name);
-		$("#matchImage").attr("src",response.photo);
+		
 		$("#myModal").modal('show');
     })
 
